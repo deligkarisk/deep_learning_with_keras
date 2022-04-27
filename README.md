@@ -10,3 +10,6 @@ The script analyzes the effect of increasing layer size on the loss and accuracy
 
 ## housing prices regression
 The script conducts regression of housing prices.
+
+## mnist classification
+Classification of the mnist dataset. The script further analyzes the effect of diferent training dataset sizes on the test dataset accuracy.
