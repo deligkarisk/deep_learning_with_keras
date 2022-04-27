@@ -1,7 +1,12 @@
 # This script runs the convolutional base of the network over the full dataset,
 # saves the output to disk and then uses this data as input to a standalone
 # classifier.
-
+# This method is computationally efficient as even if we run e.g. 100 epochs, we only need
+# to run the convolutional base one time for each image.
+# On the other hand, this method can not work with image augmentation procedures because
+# if we use image augmentation we have a differently augmented image at every epoch.
+# Thus, for image augmentations we need to calculate the conv_base at every epoch.
+# The later process, an example with image augmentation, is found on another script.
 
 from keras.applications.vgg16 import VGG16
 import os
